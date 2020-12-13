@@ -1,0 +1,11 @@
+import win32com.client as client
+outlook = client.Dispatch("Outlook.Application")
+message = outlook.CreateItem(0)
+message.Display()
+message.to ="coronacorral@gmail.com"
+message.CC = "ensaladacerveza@gmail.com"
+message.BCC = "cesarcorona@cesarcorona.com"
+message.Subject = "This was created with Python"
+message.Body = "Hello, this is a test"
+message.Save()
+message.Send()

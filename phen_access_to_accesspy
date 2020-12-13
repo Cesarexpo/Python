@@ -1,0 +1,4 @@
+import pyodbc
+
+# grab the datasources we have access to
+pyodbc.dataSources()
