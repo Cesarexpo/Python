@@ -2,7 +2,7 @@ import openpyxl
 import os
 from datetime import date
 
-os.chdir(r"C:\Users\coron\Desktop")
+os.chdir(r"C:\Users\coron\OneDrive\Atom\Python")
 wb = openpyxl.load_workbook("Project Charter - Template.xlsx")
 print(wb.sheetnames)
 sheet = wb["Project Charter"]

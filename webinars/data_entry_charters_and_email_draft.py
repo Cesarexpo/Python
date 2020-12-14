@@ -1,18 +1,17 @@
-# Operational version 20200917
+# Operational version 20201213
 import win32com.client as client
 
-free_item_code = "WBRGCTRBS20"
 
-
-def submit_blazing_hot():
+def submit_blazing_hot(webinar_identifier):
 
     outlook = client.Dispatch("Outlook.Application")
     message = outlook.CreateItem(0)
     message.Display()
     message.to = "helpdeskdataintegrity@phenomenex.com"
     message.BCC = "cesarc@phenomenex.com"
-    message.Subject = "Blazing Hot - Webinar - " + free_item_code
-    message.Attachments.Add(r"C:\Users\coron\OneDrive\Atom\Python\Project Charter - Blazing Hot.xlsx")
+    message.Subject = "Blazing Hot - Webinar - " + webinar_identifier
+    message.Attachments.Add(
+        r"C:\Users\coron\OneDrive\Atom\Python\Project Charter - Blazing Hot.xlsx")
     html_body = """
         <div>
             <span style="font-family: 'Arial'; font-size: 12; color: #000000;">
@@ -30,15 +29,16 @@ def submit_blazing_hot():
     message.Save()
 
 
-def submit_toasty_warm():
+def submit_toasty_warm(webinar_identifier):
 
     outlook = client.Dispatch("Outlook.Application")
     message = outlook.CreateItem(0)
     message.Display()
     message.to = "helpdeskdataintegrity@phenomenex.com"
     message.BCC = "cesarc@phenomenex.com"
-    message.Subject = "Toasty Warm - Webinar - " + free_item_code
-    message.Attachments.Add(r"C:\Users\coron\OneDrive\Atom\Python\Project Charter - Toasty Warm.xlsx")
+    message.Subject = "Toasty Warm - Webinar - " + webinar_identifier
+    message.Attachments.Add(
+        r"C:\Users\coron\OneDrive\Atom\Python\Project Charter - Toasty Warm.xlsx")
     html_body = """
         <div>
             <span style="font-family: 'Arial'; font-size: 12; color: #000000;">
@@ -56,15 +56,16 @@ def submit_toasty_warm():
     message.Save()
 
 
-def submit_new_project():
+def submit_new_project(webinar_identifier):
 
     outlook = client.Dispatch("Outlook.Application")
     message = outlook.CreateItem(0)
     message.Display()
     message.to = "helpdeskdataintegrity@phenomenex.com"
     message.BCC = "cesarc@phenomenex.com"
-    message.Subject = "New Project - Webinar - " + free_item_code
-    message.Attachments.Add(r"C:\Users\coron\OneDrive\Atom\Python\Project Charter - New Project.xlsx")
+    message.Subject = "New Project - Webinar - " + webinar_identifier
+    message.Attachments.Add(
+        r"C:\Users\coron\OneDrive\Atom\Python\Project Charter - New Project.xlsx")
     html_body = """
         <div>
             <span style="font-family: 'Arial'; font-size: 12; color: #000000;">

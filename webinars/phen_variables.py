@@ -5,7 +5,6 @@ import pandas as pd
 
 
 def phen_var(webinar_identifier):
-    # webinar_identifier = "WBRSPPHARMA20"
 
     # Access section: Retrieve variable values
 
@@ -28,7 +27,6 @@ def phen_var(webinar_identifier):
     data = pd.read_sql(query, cnxn, index_col="FreeItemCode")
 
     # define selected FreeItemCode
-    # webinar_identifier = "WBRLCCOVID20"
 
     # Check data
     print(data.columns)
@@ -51,5 +49,6 @@ def phen_var(webinar_identifier):
     attendees = data.loc[webinar_identifier, "Attendees"]
     whoshouldattend = data.loc[webinar_identifier, "WhoShouldAttend"]
     learning_objectives = data.loc[webinar_identifier, "LearningObjectives"]
-    # print(webinartitle, presenter, date, time, whoshouldattend, brc,webinar_identifier, overview, registrantstotal, attendees)
+    print(webinartitle, presenter, date, time, whoshouldattend, brc,
+          webinar_identifier, overview, registrantstotal, attendees)
     return webinartitle, presenter, date, time, whoshouldattend, brc, webinar_identifier, overview, registrantstotal, attendees
